@@ -1,3 +1,3 @@
 ## Instruction for presentation
 
-- presentation need to be in pdf nad ppt form
+- presentation need to be in pdf and ppt form
