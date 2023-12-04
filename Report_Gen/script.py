@@ -57,12 +57,15 @@ if __name__ == "__main__":
     input_file_path = 'input.json'
     Year = "2024"
     Semester = "Fall"
-    Version = "2"
+    Version = "1"
 
 
     output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals\{Year}\{Semester}\{Version}\\'
     with open(output_file_path+ input_file_path, 'r') as input_file:
         json_data = json.load(input_file)
     generate_readme(json_data, output_file_path)
-    shutil.copy(f"{json_data['Year']}_{json_data['Semester']}_{json_data['Version']}.png",output_file_path )
+    try:
+        shutil.copy(f"{json_data['Year']}_{json_data['Semester']}_{json_data['Version']}.png",output_file_path )
+    except:
+        print('No Figure is needed.')
     print(f"proposal_{json_data['instructor']}.md generated successfully.")
