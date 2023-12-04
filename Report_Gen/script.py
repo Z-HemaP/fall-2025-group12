@@ -1,8 +1,9 @@
 import os
 from datetime import datetime
 import json
+import shutil
 # ....................................................................................................
-def generate_readme(data):
+def generate_readme(data, output_file_path):
     readme_template = \
 f"""
 # Capstone Proposal
@@ -17,7 +18,7 @@ f"""
 ## 1 Objective:  
 {data['Objective']}
 
-![Figure 1: Example figure](fig.png)
+![Figure 1: Example figure]({data['Year']}_{data['Semester']}_{data['Version']}.png)
 *Figure 1: Caption*
 
 ## 2 Dataset:  
@@ -45,14 +46,23 @@ f"""
 - GitHub: [{data['github_repo']}](Git Hub rep)
 """
     # .......................................................
-    with open(f"proposal_{data['instructor']}.md", "w") as readme_file:
+    with open(output_file_path + f"proposal_{data['Version']}.md", "w") as readme_file:
         readme_file.write(readme_template)
+
 
 
 # -------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
+
     input_file_path = 'input.json'
-    with open(input_file_path, 'r') as input_file:
+    Year = "2024"
+    Semester = "Fall"
+    Version = "2"
+
+
+    output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals\{Year}\{Semester}\{Version}\\'
+    with open(output_file_path+ input_file_path, 'r') as input_file:
         json_data = json.load(input_file)
-    generate_readme(json_data)
+    generate_readme(json_data, output_file_path)
+    shutil.copy(f"{json_data['Year']}_{json_data['Semester']}_{json_data['Version']}.png",output_file_path )
     print(f"proposal_{json_data['instructor']}.md generated successfully.")
