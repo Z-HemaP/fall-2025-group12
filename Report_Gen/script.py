@@ -41,8 +41,8 @@ f"""
 
 ## Contact
 - Author: {data['instructor']}
-- Email: [Email]{data['instructor_email']}
-- GitHub: [GitHub Repo]({data['github_repo']})
+- Email: [{data['instructor_email']}](Eamil)
+- GitHub: [{data['github_repo']}](Git Hub rep)
 """
     # .......................................................
     with open(f"proposal_{data['instructor']}.md", "w") as readme_file:

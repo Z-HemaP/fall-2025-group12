@@ -84,5 +84,5 @@
 
 ## Contact
 - Author: Amir Jafari
-- Email: [Email]ajafari@gmail.com
-- GitHub: [GitHub Repo](https://github.com/amir-jafari/Capstone)
+- Email: [ajafari@gmail.com](Eamil)
+- GitHub: [https://github.com/amir-jafari/Capstone](Git Hub rep)
