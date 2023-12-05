@@ -10,7 +10,8 @@
 
 ## 1 Objective:  
  
-            The goal of this project is to convert all the Neural Network Deisgn Demos from Pyqt to streamlit.
+            The goal of this project is to convert all the Neural Network Design Demos from Pyqt to streamlit. 
+            Currently all the demos are in pyqt environment and we a
             
 
 ![Figure 1: Example figure](2024_Fall_1.png)

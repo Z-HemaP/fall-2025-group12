@@ -25,7 +25,8 @@ data_to_save = \
         # -----------------------------------------------------------------------------------------------------------------------
         "Objective":
             """ 
-            The goal of this project is to convert all the Neural Network Deisgn Demos from Pyqt to streamlit.
+            The goal of this project is to convert all the Neural Network Design Demos from Pyqt to streamlit. 
+            Currently all the demos are in pyqt environment and we a
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Dataset":
@@ -79,8 +80,8 @@ data_to_save = \
         "github_repo": "https://github.com/amir-jafari/Capstone",
         # -----------------------------------------------------------------------------------------------------------------------
     }
-os.makedirs(os.getcwd() + os.sep + f'Arxiv\Proposals\{data_to_save["Year"]}\{data_to_save["Semester"]}\{data_to_save["Version"]}',exist_ok=True)
-output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals\{data_to_save["Year"]}\{data_to_save["Semester"]}\\{data_to_save["Version"]}\\'
+os.makedirs(os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',exist_ok=True)
+output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}{os.sep}'
 save_to_json(data_to_save, output_file_path + "input.json")
 shutil.copy('json_gen.py',output_file_path )
 print(f"Data saved to {output_file_path}")

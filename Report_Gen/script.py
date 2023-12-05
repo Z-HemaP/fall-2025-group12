@@ -60,7 +60,7 @@ if __name__ == "__main__":
     Version = "1"
 
 
-    output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals\{Year}\{Semester}\{Version}\\'
+    output_file_path = os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{Year}{os.sep}{Semester}{os.sep}{Version}{os.sep}'
     with open(output_file_path+ input_file_path, 'r') as input_file:
         json_data = json.load(input_file)
     generate_readme(json_data, output_file_path)
