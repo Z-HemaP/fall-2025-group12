@@ -12,8 +12,8 @@
  
             PyG (PyTorch Geometric) is a library built upon PyTorch to easily write and train Graph Neural Networks 
             (GNNs) for a wide range of applications related to structured data. It consists of various methods for deep
-            learning on graphs and other irregular structures, also known as geometric deep learning. The goal of this 
-            project is to use PyG package on  Biology, Computer Vision, Finance, Language Models, Modeling Physical systems,
+            learning on graphs and other irregular structures, also known as geometric deep learning (https://pyg.org/blogs-and-tutorials). 
+            The goal of this project is to use PyG package on  Biology, Computer Vision, Finance, Language Models, Modeling Physical systems,
             Knowledge Graphs, Fraud detection and social network analysis. The package has great documentation which need
             to be used as ground work for understanding the PyG and use that toward one of the above applications. Finally, 
             we will find a set of data that fits the application and compare it with deep learning methods and develop
