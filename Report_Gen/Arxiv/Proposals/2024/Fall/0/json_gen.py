@@ -1,11 +1,11 @@
 import json
 import os
 import shutil
+
+
 def save_to_json(data, output_file_path):
     with open(output_file_path, 'w') as output_file:
         json.dump(data, output_file, indent=2)
-
-
 
 
 data_to_save = \
@@ -37,13 +37,13 @@ data_to_save = \
         "Dataset":
             """
             Dr. Ryan is going to provide us the data and the location of it. 
-            
+
             We have a geospatial data for these three cities: Lagos Nigeria, Accra Ghana and Nairobi Kenya. Each city there is a 
             series of covariates at 100m grid cells. There are 166 individual tif files that are aligned to the same grid for 
             the cities. There are approximately 50-60 for each city. These data sets represent infrastructure, social economic 
             status (SES), facilities and services, physical hazards and assets and others. The number of covariates varies by 
             city, but there is a set that is common to all of the cities.  
-            
+
             For each city we are working on extracting Sentinel 2 imagery (10m spatial resolution) for each city. We are running 
             contextual features for each city. This produces 144 layers from the imagery that map spatial patterns and estimates 
             of vegetation. These features are calculated on the same grid and in such a way that a 10x10 group of pixels matches 
@@ -62,7 +62,7 @@ data_to_save = \
         "Approach":
             """
             I plan on approaching this capstone through several steps.  
-            
+
             1. Automate data capturing from Google Earth Engine (Python code in the engine).
             2. Work on the covariate features importance.  
             3. Use covariate features to model degree of poverty (Classical Models).
@@ -73,7 +73,7 @@ data_to_save = \
         "Timeline":
             """
             This a rough time line for this project:  
-            
+
             - (3 Weeks) Data Automation.  
             - (3 Weeks) Feature Importance  
             - (4 Weeks) Modeling  
@@ -100,8 +100,10 @@ data_to_save = \
         "github_repo": "https://github.com/amir-jafari/Capstone",
         # -----------------------------------------------------------------------------------------------------------------------
     }
-os.makedirs(os.getcwd() + os.sep + f'Arxiv\Proposals\{data_to_save["Year"]}\{data_to_save["Semester"]}\{data_to_save["Version"]}',exist_ok=True)
+os.makedirs(
+    os.getcwd() + os.sep + f'Arxiv\Proposals\{data_to_save["Year"]}\{data_to_save["Semester"]}\{data_to_save["Version"]}',
+    exist_ok=True)
 output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals\{data_to_save["Year"]}\{data_to_save["Semester"]}\\{data_to_save["Version"]}\\'
 save_to_json(data_to_save, output_file_path + "input.json")
-shutil.copy('json_gen.py',output_file_path )
+shutil.copy('json_gen.py', output_file_path)
 print(f"Data saved to {output_file_path}")

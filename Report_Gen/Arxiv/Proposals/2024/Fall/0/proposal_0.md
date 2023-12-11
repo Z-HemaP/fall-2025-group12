@@ -25,13 +25,13 @@
 ## 2 Dataset:  
 
             Dr. Ryan is going to provide us the data and the location of it. 
-            
+
             We have a geospatial data for these three cities: Lagos Nigeria, Accra Ghana and Nairobi Kenya. Each city there is a 
             series of covariates at 100m grid cells. There are 166 individual tif files that are aligned to the same grid for 
             the cities. There are approximately 50-60 for each city. These data sets represent infrastructure, social economic 
             status (SES), facilities and services, physical hazards and assets and others. The number of covariates varies by 
             city, but there is a set that is common to all of the cities.  
-            
+
             For each city we are working on extracting Sentinel 2 imagery (10m spatial resolution) for each city. We are running 
             contextual features for each city. This produces 144 layers from the imagery that map spatial patterns and estimates 
             of vegetation. These features are calculated on the same grid and in such a way that a 10x10 group of pixels matches 
@@ -50,7 +50,7 @@
 ## 4 Approach:  
 
             I plan on approaching this capstone through several steps.  
-            
+
             1. Automate data capturing from Google Earth Engine (Python code in the engine).
             2. Work on the covariate features importance.  
             3. Use covariate features to model degree of poverty (Classical Models).
@@ -61,7 +61,7 @@
 ## 5 Timeline:  
 
             This a rough time line for this project:  
-            
+
             - (3 Weeks) Data Automation.  
             - (3 Weeks) Feature Importance  
             - (4 Weeks) Modeling  
