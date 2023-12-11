@@ -35,7 +35,7 @@
 ## 4 Approach:  
 
             I plan on approaching this capstone through several steps.  
-            
+
             1. Familiarize yourself with Streamlit environment.
             2. Design the web layout with 2 books and all the chapters.  
             3. Create a modular widgets can be used across all the chapters (Reusable).
@@ -48,7 +48,7 @@
 ## 5 Timeline:  
 
             This a rough time line for this project:  
-            
+
             - (1 Weeks) Streamlit environment.  
             - (2 Weeks) Web layout  
             - (1 Weeks) Modular widgets  

@@ -2,7 +2,29 @@ import os
 from datetime import datetime
 import json
 import shutil
+import markdown2
+import re
+import mistune
 # ....................................................................................................
+class MyRenderer(mistune.Renderer):
+    def list_item(self, text):
+        # Wrap each list item in <li> tags and add a line break
+        return f'<li>{text}</li>\n'
+
+def convert_md_to_html(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as md_file:
+        md_content = md_file.read()
+
+        # Convert Markdown to HTML with mistune for better control
+        renderer = MyRenderer()
+        md_parser = mistune.Markdown(renderer)
+        html_content = md_parser(md_content)
+
+        # Keep spaces after numbers and dots in enumeration
+        html_content = re.sub(r'(\d+)\. ', r'\1. ', html_content)
+
+        with open(output_file, 'w', encoding='utf-8') as html_file:
+            html_file.write(html_content)
 def generate_readme(data, output_file_path):
     readme_template = \
 f"""
@@ -57,13 +79,16 @@ if __name__ == "__main__":
     input_file_path = 'input.json'
     Year = "2024"
     Semester = "Fall"
-    Version = "3"
+    Version = "1"
 
 
     output_file_path = os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{Year}{os.sep}{Semester}{os.sep}{Version}{os.sep}'
     with open(output_file_path+ input_file_path, 'r') as input_file:
         json_data = json.load(input_file)
     generate_readme(json_data, output_file_path)
+    md_file = f"proposal_{json_data['Version']}.md"
+    html_file = f"proposal_{json_data['Version']}.html"
+    html_output = convert_md_to_html(output_file_path + md_file, output_file_path+ html_file)
     try:
         shutil.copy(f"{json_data['Year']}_{json_data['Semester']}_{json_data['Version']}.png",output_file_path )
     except:

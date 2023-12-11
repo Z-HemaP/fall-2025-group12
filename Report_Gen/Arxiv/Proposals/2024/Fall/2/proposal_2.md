@@ -41,7 +41,7 @@
 ## 4 Approach:  
 
             I plan on approaching this capstone through several steps.  
-            
+
             1. Create the SOM class.
             2. Design the package and the folder structure.
             3. Create modular and reusable figure codes. 
@@ -55,7 +55,7 @@
 ## 5 Timeline:  
 
             This a rough time line for this project:  
-            
+
             - (1 Weeks) Create the SOM class structure .  
             - (2 Weeks) Design the folder and classes and utils functions.  
             - (1 Weeks) Modular widgets  

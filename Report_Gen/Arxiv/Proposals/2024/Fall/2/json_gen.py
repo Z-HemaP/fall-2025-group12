@@ -1,11 +1,11 @@
 import json
 import os
 import shutil
+
+
 def save_to_json(data, output_file_path):
     with open(output_file_path, 'w') as output_file:
         json.dump(data, output_file, indent=2)
-
-
 
 
 data_to_save = \
@@ -53,7 +53,7 @@ data_to_save = \
         "Approach":
             """
             I plan on approaching this capstone through several steps.  
-            
+
             1. Create the SOM class.
             2. Design the package and the folder structure.
             3. Create modular and reusable figure codes. 
@@ -67,7 +67,7 @@ data_to_save = \
         "Timeline":
             """
             This a rough time line for this project:  
-            
+
             - (1 Weeks) Create the SOM class structure .  
             - (2 Weeks) Design the folder and classes and utils functions.  
             - (1 Weeks) Modular widgets  
@@ -96,8 +96,10 @@ data_to_save = \
         "github_repo": "https://github.com/amir-jafari/Capstone",
         # -----------------------------------------------------------------------------------------------------------------------
     }
-os.makedirs(os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',exist_ok=True)
+os.makedirs(
+    os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',
+    exist_ok=True)
 output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}{os.sep}'
 save_to_json(data_to_save, output_file_path + "input.json")
-shutil.copy('json_gen.py',output_file_path )
+shutil.copy('json_gen.py', output_file_path)
 print(f"Data saved to {output_file_path}")

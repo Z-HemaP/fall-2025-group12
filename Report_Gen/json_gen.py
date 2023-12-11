@@ -1,18 +1,18 @@
 import json
 import os
 import shutil
+
+
 def save_to_json(data, output_file_path):
     with open(output_file_path, 'w') as output_file:
         json.dump(data, output_file, indent=2)
-
-
 
 
 data_to_save = \
     {
         # -----------------------------------------------------------------------------------------------------------------------
         "Version":
-            """3""",
+            """1""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Year":
             """2024""",
@@ -21,69 +21,64 @@ data_to_save = \
             """Fall""",
         # -----------------------------------------------------------------------------------------------------------------------
         "project_name":
-            """Graph Neural Network (PyG)""",
+            """Neural Network Design Streamlit App """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Objective":
             """ 
-            PyG (PyTorch Geometric) is a library built upon PyTorch to easily write and train Graph Neural Networks 
-            (GNNs) for a wide range of applications related to structured data. It consists of various methods for deep
-            learning on graphs and other irregular structures, also known as geometric deep learning (https://pyg.org/blogs-and-tutorials). 
-            The goal of this project is to use PyG package on  Biology, Computer Vision, Finance, Language Models, Modeling Physical systems,
-            Knowledge Graphs, Fraud detection and social network analysis. The package has great documentation which need
-            to be used as ground work for understanding the PyG and use that toward one of the above applications. Finally, 
-            we will find a set of data that fits the application and compare it with deep learning methods and develop
-            a comparative study of the GNN and Deep Learning techniques.
+            The goal of this project is to convert all the Neural Network Design Demos from Pyqt to streamlit App. 
+            Currently all the demos are in pyqt environment and can be installed by pip (https://pypi.org/project/nndesigndemos/).
+            In the project, you job is is converting All the current demos which is written in python and uses pyqt widgets to 
+            Streamlit webapp. And then create a container that can be deployed in the web domain. The final product is using the 
+            demos by providing a user a link that opens up a webpage and all the demos will be accessed through internet.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Dataset":
             """
-            The publicly available data for each application needs to be find in Kaggle Dataset or any source of data.
+            No Dataset is needed for this project .  
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Rationale":
             """
-            This project is going to help machine learning and deeplearning researches to understand GNN by comparing it
-            with other available methods. 
-
+            This project is going to help students to use the Neural Network book demos in web format and it would easier for students 
+            to access them. This is project is educational case that helps Neural Network Community to understand Neural Network
+            in more conceptual way.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Approach":
             """
             I plan on approaching this capstone through several steps.  
-            
-            1. Design folder structure for the repo GNN.
-            2. Create a basic GNN code (basic code: Data loaders, models)
-            3. Create modular and reusable codes. 
-            4. Work on specific application (any of applications which is mentioned).
-            5. Create a tutorial and slides for the specific GNN.
-            6. Use external dataset and compare results with DL models.
-            7. Write a journal paper.
-            8. Create a documentation for each application with slides, basic codes and final application training code.
+
+            1. Familiarize yourself with Streamlit environment.
+            2. Design the web layout with 2 books and all the chapters.  
+            3. Create a modular widgets can be used across all the chapters (Reusable).
+            4. Create a documentation from the begging till the end of the product.
+            5. After all demos is done, testing it in local machine.
+            6. Create the container that can be used in deployment.
+            7. Deploy it on a server that can be accessed over the internet. 
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Timeline":
             """
             This a rough time line for this project:  
-            
-            - (1 Weeks) Create folder structure.  
-            - (3 Weeks) Basic GNN code and documentation 
-            - (1 Weeks) Modular reusable class and functions.  
-            - (1 Weeks) Pick and application and do a literature review.
-            - (2 Weeks) Tutorial and slides for specific application
-            - (3 Weeks) Find external dataset and train the network (comparative study)
-            - (2 Weeks) Expand the GNN through different set of data and show the power of GNN.
-            - (2 Weeks) Write a paper.
+
+            - (1 Weeks) Streamlit environment.  
+            - (2 Weeks) Web layout  
+            - (1 Weeks) Modular widgets  
+            - (4 Weeks) Convert all the demos 
+            - (2 Weeks) Container  
+            - (2 Weeks) Web Deployment
+            - (2 Weeks) Documentation
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Expected Number Students":
             """
-            For this project maximum 8 students can work on it.  
+            For this project maximum 2 students can work on it.  
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Possible Issues":
             """
-            The challenge is understanding the GNN in great details. Solve realworld problem and create through examples
-            that it shows the power of GNN. 
+            The challenge is on creating modular widgets and create a same layout as the book. Also, web deployment and
+            containerizing it is also another challenge. 
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Proposed by": "Dr. Amir Jafari",
@@ -93,8 +88,10 @@ data_to_save = \
         "github_repo": "https://github.com/amir-jafari/Capstone",
         # -----------------------------------------------------------------------------------------------------------------------
     }
-os.makedirs(os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',exist_ok=True)
+os.makedirs(
+    os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',
+    exist_ok=True)
 output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}{os.sep}'
 save_to_json(data_to_save, output_file_path + "input.json")
-shutil.copy('json_gen.py',output_file_path )
+shutil.copy('json_gen.py', output_file_path)
 print(f"Data saved to {output_file_path}")
