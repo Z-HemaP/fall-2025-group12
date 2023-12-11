@@ -12,7 +12,7 @@ data_to_save = \
     {
         # -----------------------------------------------------------------------------------------------------------------------
         "Version":
-            """1""",
+            """0""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Year":
             """2024""",
@@ -21,77 +21,89 @@ data_to_save = \
             """Fall""",
         # -----------------------------------------------------------------------------------------------------------------------
         "project_name":
-            """Neural Network Design Streamlit App """,
+            """Mapping Deprived Areas in Low and Middle Income Countries (LMIC) - Part 1""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Objective":
             """ 
-            The goal of this project is to convert all the Neural Network Design Demos from Pyqt to streamlit App. 
-            Currently all the demos are in pyqt environment and can be installed by pip (https://pypi.org/project/nndesigndemos/).
-            In the project, you job is is converting All the current demos which is written in python and uses pyqt widgets to 
-            Streamlit webapp. And then create a container that can be deployed in the web domain. The final product is using the 
-            demos by providing a user a link that opens up a webpage and all the demos will be accessed through internet.
+            The goal of this project is to develop a methodology to map of deprived areas using a range of geospatial data
+            at approximately 100m grid cells. This will help cities understand the spatial pattern of Sustainable Development 
+            Goal 1 (Poverty) and Sustainable Development Goal 11 (sustainable cities and Communities). Want to use a
+            combination of open source geospatial data and satellite imagery to map variations in poverty. Allow for
+            comparisons between cities and determine if models made in one city can be used in another city. 
+            This project could possibly be funded by the European Space Agency (for 8 cities) and theoretically
+            could be expanded to the entire developing world.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Dataset":
             """
-            No Dataset is needed for this project .  
+            Dr. Ryan is going to provide us the data and the location of it. 
+
+            We have a geospatial data for these three cities: Lagos Nigeria, Accra Ghana and Nairobi Kenya. Each city there is a 
+            series of covariates at 100m grid cells. There are 166 individual tif files that are aligned to the same grid for 
+            the cities. There are approximately 50-60 for each city. These data sets represent infrastructure, social economic 
+            status (SES), facilities and services, physical hazards and assets and others. The number of covariates varies by 
+            city, but there is a set that is common to all of the cities.  
+
+            For each city we are working on extracting Sentinel 2 imagery (10m spatial resolution) for each city. We are running 
+            contextual features for each city. This produces 144 layers from the imagery that map spatial patterns and estimates 
+            of vegetation. These features are calculated on the same grid and in such a way that a 10x10 group of pixels matches 
+            each 100m grid cell. Imagery is collected from Google Earth Engine (Training and validation Data). For Lagos and Accra
+            we have created a training and validation data set at the grid cell level. Training data is Deprived residential,
+            Other Built, and non-built. Model Attributes: Want to be able to model deprivation estimate at the 100m grid cell 
+            level. Test different models to be able to do this. Also, estimate of degree of deprivation, produce a scale of 
+            deprivation so that city governments can set this level themselves and play around with the models.  
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Rationale":
             """
-            This project is going to help students to use the Neural Network book demos in web format and it would easier for students 
-            to access them. This is project is educational case that helps Neural Network Community to understand Neural Network
-            in more conceptual way.
+            This project is going to help agencies to tackle poverty and help countries.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Approach":
             """
             I plan on approaching this capstone through several steps.  
 
-            1. Familiarize yourself with Streamlit environment.
-            2. Design the web layout with 2 books and all the chapters.  
-            3. Create a modular widgets can be used across all the chapters (Reusable).
-            4. Create a documentation from the begging till the end of the product.
-            5. After all demos is done, testing it in local machine.
-            6. Create the container that can be used in deployment.
-            7. Deploy it on a server that can be accessed over the internet. 
+            1. Automate data capturing from Google Earth Engine (Python code in the engine).
+            2. Work on the covariate features importance.  
+            3. Use covariate features to model degree of poverty (Classical Models).
+            4. Use a model developed in on city and apply it to other cities (Transfer Learning)
+            5. Combine satellite images with covariate features.  
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Timeline":
             """
             This a rough time line for this project:  
 
-            - (1 Weeks) Streamlit environment.  
-            - (2 Weeks) Web layout  
-            - (1 Weeks) Modular widgets  
-            - (4 Weeks) Convert all the demos 
-            - (2 Weeks) Container  
-            - (2 Weeks) Web Deployment
-            - (2 Weeks) Documentation
+            - (3 Weeks) Data Automation.  
+            - (3 Weeks) Feature Importance  
+            - (4 Weeks) Modeling  
+            - (2 Weeks) Combine satellite images with covariate features  
+            - (1 Weeks) Compiling Results  
+            - (1 Weeks) Writing Up a paper and submission
+            - (1 Weeks) Final Presentation  
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Expected Number Students":
             """
-            For this project maximum 2 students can work on it.  
+            For this project maximum 4 students can work on it.  
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Possible Issues":
             """
-            The challenge is on creating modular widgets and create a same layout as the book. Also, web deployment and
-            containerizing it is also another challenge. 
+            The challenge is on data analysis part , find a good features and train a decent model.
             """,
         # -----------------------------------------------------------------------------------------------------------------------
-        "Proposed by": "Dr. Amir Jafari",
-        "Proposed by email": "ajafari@gwu.edu",
+        "Proposed by": "Dr. Ryan Engstrom",
+        "Proposed by email": "rengstro@gwu.edu",
         "instructor": "Amir Jafari",
         "instructor_email": "ajafari@gmail.com",
         "github_repo": "https://github.com/amir-jafari/Capstone",
         # -----------------------------------------------------------------------------------------------------------------------
     }
 os.makedirs(
-    os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',
+    os.getcwd() + os.sep + f'Arxiv\Proposals\{data_to_save["Year"]}\{data_to_save["Semester"]}\{data_to_save["Version"]}',
     exist_ok=True)
-output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}{os.sep}'
+output_file_path = os.getcwd() + os.sep + f'Arxiv\Proposals\{data_to_save["Year"]}\{data_to_save["Semester"]}\\{data_to_save["Version"]}\\'
 save_to_json(data_to_save, output_file_path + "input.json")
 shutil.copy('json_gen.py', output_file_path)
 print(f"Data saved to {output_file_path}")
