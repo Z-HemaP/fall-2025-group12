@@ -1,4 +1,7 @@
-# Python Packaging Project Tutorial with PyPI (Feb 2024)
+# Python Packaging Project Tutorial with PyPI 
+- Authors 
+  - Lakshmi Sravya Chalapati <sravyach24@gwmail.gwu.edu> 
+  - Tanaka, Ei <ei.tanaka@email.gwu.edu>
 
 ## 1. Overview 
 This guide provides step-by-step instructions on how to package a basic Python project. It covers how to organize and prepare your project with the required files for packaging, how to compile the package, and how to publish it to the Python Package Index (PyPI).
