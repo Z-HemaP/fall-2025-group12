@@ -1,3 +1,5 @@
+Author:Bingly, Arjun
+Github: https://github.com/arjbingly/pythonPackaging/
 # Example Python Packaging
 
 ```
