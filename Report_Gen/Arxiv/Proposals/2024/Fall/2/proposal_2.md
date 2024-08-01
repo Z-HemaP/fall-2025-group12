@@ -1,30 +1,15 @@
-import json
-import os
-import shutil
+
+# Capstone Proposal
+## Multi-Agent LLM System for Complex Document Analysis
+### Proposed by: Dr. Amir Jafari
+#### Email: ajafari@gwu.edu
+#### Advisor: Amir Jafari
+#### The George Washington University, Washington DC  
+#### Data Science Program
 
 
-def save_to_json(data, output_file_path):
-    with open(output_file_path, 'w') as output_file:
-        json.dump(data, output_file, indent=2)
-
-
-data_to_save = \
-    {
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Version":
-            """2""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Year":
-            """2024""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Semester":
-            """Fall""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "project_name":
-            """Multi-Agent LLM System for Complex Document Analysis""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Objective":
-            """ 
+## 1 Objective:  
+ 
             The goal of this project is to develop an advanced multi-agent system using Large Language Models (LLMs) to 
             solve complex tasks involving the analysis and synthesis of information from diverse document sources. The system will:
 
@@ -43,10 +28,13 @@ data_to_save = \
 
             The end product will be a powerful, flexible system capable of understanding, analyzing, and synthesizing
              information from diverse document sources to solve intricate, multi-faceted problems.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Dataset":
-            """
+            
+
+![Figure 1: Example figure](2024_Fall_2.png)
+*Figure 1: Caption*
+
+## 2 Dataset:  
+
             The project will utilize a diverse range of document types from various sources to train and test the 
             multi-agent system. Datasets may include:
 
@@ -62,10 +50,10 @@ data_to_save = \
             Students will need to curate a balanced and representative dataset for each agent's specific task, ensuring 
             diversity in content, structure, and complexity. Proper attention must be given to licensing and usage 
             rights for all data sources.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Rationale":
-            """
+            
+
+## 3 Rationale:  
+
             In today's information-rich world, the ability to efficiently process, analyze, and synthesize knowledge from
              diverse sources is crucial. This project addresses several key needs:
 
@@ -79,10 +67,10 @@ data_to_save = \
             By developing this multi-agent LLM system, students will contribute to the cutting-edge of AI and natural 
             language processing, potentially revolutionizing how complex information is processed and analyzed across 
             various industries and academic fields.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Approach":
-            """
+            
+
+## 4 Approach:  
+
             The project will be approached through several key steps:
 
             1. Research and Planning:
@@ -131,10 +119,10 @@ data_to_save = \
             10. Documentation and Deployment:
                 - Create comprehensive documentation for the system architecture and individual components
                 - Prepare a deployment strategy, considering potential cloud-based implementations
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Timeline":
-            """
+            
+
+## 5 Timeline:  
+
             This is a rough timeline for the project:
 
             - (2 Weeks) Research and Planning
@@ -148,17 +136,17 @@ data_to_save = \
             - (2 Weeks) Explainability and Transparency Features
             - (1 Week)  Documentation
             - (1 Week)  Final Presentation and Project Wrap-up
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Expected Number Students":
-            """
+            
+
+## 6 Expected Number Students:  
+
             Given the complexity and scope of this project, it is suitable for a team of 4-5 students. The multi-faceted
              nature of the system allows for effective task distribution, promoting collaborative learning and development 
              across various aspects of AI and NLP.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Possible Issues":
-            """
+            
+
+## 7 Possible Issues:  
+
             Several challenges may arise during the project:
 
             1. Complexity of Integration: Ensuring seamless interaction between multiple specialized agents and the language graph.
@@ -173,19 +161,10 @@ data_to_save = \
             10. Evaluation Metrics: Defining comprehensive metrics to assess the system's performance on complex, multi-faceted tasks.
 
             Students will need to research and implement solutions to these challenges, which will be an integral part of the learning experience and contribute significantly to the project's innovation.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Proposed by": "Dr. Amir Jafari",
-        "Proposed by email": "ajafari@gwu.edu",
-        "instructor": "Amir Jafari",
-        "instructor_email": "ajafari@gmail.com",
-        "github_repo": "https://github.com/amir-jafari/Capstone",
-        # -----------------------------------------------------------------------------------------------------------------------
-    }
-os.makedirs(
-    os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',
-    exist_ok=True)
-output_file_path = os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}{os.sep}'
-save_to_json(data_to_save, output_file_path + "input.json")
-shutil.copy('json_gen.py', output_file_path)
-print(f"Data saved to {output_file_path}")
+            
+
+
+## Contact
+- Author: Amir Jafari
+- Email: [ajafari@gmail.com](Eamil)
+- GitHub: [https://github.com/amir-jafari/Capstone](Git Hub rep)
