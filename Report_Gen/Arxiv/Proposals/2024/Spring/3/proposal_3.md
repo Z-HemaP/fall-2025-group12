@@ -20,7 +20,7 @@
             a comparative study of the GNN and Deep Learning techniques.
             
 
-![Figure 1: Example figure](2024_Fall_3.png)
+![Figure 1: Example figure](2024_Spring_3.png)
 *Figure 1: Caption*
 
 ## 2 Dataset:  

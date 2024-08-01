@@ -17,7 +17,7 @@
             demos by providing a user a link that opens up a webpage and all the demos will be accessed through internet.
             
 
-![Figure 1: Example figure](2024_Fall_1.png)
+![Figure 1: Example figure](2024_Spring_1.png)
 *Figure 1: Caption*
 
 ## 2 Dataset:  

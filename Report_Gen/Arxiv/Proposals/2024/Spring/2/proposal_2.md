@@ -22,7 +22,7 @@
             classical clustering algorithm.  
             
 
-![Figure 1: Example figure](2024_Fall_2.png)
+![Figure 1: Example figure](2024_Spring_2.png)
 *Figure 1: Caption*
 
 ## 2 Dataset:  
