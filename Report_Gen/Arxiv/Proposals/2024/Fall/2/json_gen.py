@@ -21,7 +21,7 @@ data_to_save = \
             """Fall""",
         # -----------------------------------------------------------------------------------------------------------------------
         "project_name":
-            """Multi-Agent LLM System for Complex Document Analysis""",
+            """Multi-Agent LLM and LangGrapgh for Complex Document Analysis""",
         # -----------------------------------------------------------------------------------------------------------------------
         "Objective":
             """ 

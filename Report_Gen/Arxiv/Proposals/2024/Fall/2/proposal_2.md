@@ -1,6 +1,6 @@
 
 # Capstone Proposal
-## Multi-Agent LLM System for Complex Document Analysis
+## Multi-Agent LLM and LangGrapgh for Complex Document Analysis
 ### Proposed by: Dr. Amir Jafari
 #### Email: ajafari@gwu.edu
 #### Advisor: Amir Jafari
