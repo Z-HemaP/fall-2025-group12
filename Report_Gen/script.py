@@ -12,7 +12,7 @@ class MyRenderer(mistune.Renderer):
         return f'<li>{text}</li>\n'
 
 def convert_md_to_html(input_file, output_file):
-    with open(input_file, 'r', encoding='utf-8') as md_file:
+    with open(input_file, 'r', encoding='utf-8', errors='replace') as md_file:  # Added 'errors' argument
         md_content = md_file.read()
 
         # Convert Markdown to HTML with mistune for better control
@@ -25,6 +25,7 @@ def convert_md_to_html(input_file, output_file):
 
         with open(output_file, 'w', encoding='utf-8') as html_file:
             html_file.write(html_content)
+
 def generate_readme(data, output_file_path):
     readme_template = \
 f"""
@@ -80,7 +81,7 @@ if __name__ == "__main__":
     input_file_path = 'input.json'
     Year = "2024"
     Semester = "Fall"
-    Version = "2"
+    Version = "3"
 
 
     output_file_path = os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{Year}{os.sep}{Semester}{os.sep}{Version}{os.sep}'
