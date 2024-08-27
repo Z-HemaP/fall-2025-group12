@@ -87,7 +87,7 @@
 ## 6 Expected Number Students:  
 
             Given the scope of work and the need to explore multiple datasets and modeling techniques, this project is suitable 
-            for a team of 3-4 students.
+            for a team of 1-2 students.
             
 
 ## 7 Possible Issues:  
