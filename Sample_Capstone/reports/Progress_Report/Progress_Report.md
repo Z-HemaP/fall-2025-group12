@@ -11,12 +11,10 @@ https://www.markdownguide.org/cheat-sheet/
 - Action Items:
 
 * [ ] Action Item 1
-
-
--[ ] Action Item 2
--[ ] Action Item 3
--[ ] Action Item 4
--[ ] Action Item 5
+* [ ] Action Item 2
+* [ ] Action Item 3
+* [ ] Action Item 4
+* [ ] Action Item 5
 ---
 ### Date: sep 24 2024 
 - Topics of discussion
@@ -28,26 +26,26 @@ https://www.markdownguide.org/cheat-sheet/
 |&#x2611;|&#x2610;|&#x2612;|
 
 - Action Items:
--[ ]  Action Item 1
--[ ]  Action Item 2
--[ ]  Action Item 3
--[ ]  Action Item 4
--[ ]  Action Item 5
+* [ ] Action Item 1
+* [ ] Action Item 2
+* [ ] Action Item 3
+* [ ] Action Item 4
+* [ ] Action Item 5
 ---
 ### Date: sep 24 2024 
 - Topics of discussion
 
-| Checkbox Experiments | [ ] unchecked header  | [x] checked header  |
-| ---------------------|:---------------------:|:-------------------:|
-| checkbox             | [ ] row               | [x] row             |
+| Checkbox Experiments | [ ] unchecked header | [x] checked header |
+| ---------------------|:--------------------:|:------------------:|
+| checkbox             |      * [ ] row       |     * [x] row      |
 
 
 - Action Items:
--[ ]  Action Item 1
--[ ]  Action Item 2
--[ ]  Action Item 3
--[ ]  Action Item 4
--[ ]  Action Item 5
+* [ ] Action Item 1
+* [ ] Action Item 2
+* [ ] Action Item 3
+* [ ] Action Item 4
+* [ ] Action Item 5
 ---
 ### Date: sep 24 2024 
 - Topics of discussion
@@ -62,11 +60,11 @@ https://www.markdownguide.org/cheat-sheet/
 | <li>- [x] </li> |  |
 
 - Action Items:
--[ ]  Action Item 1
--[ ]  Action Item 2
--[ ]  Action Item 3
--[ ]  Action Item 4
--[ ]  Action Item 5
+* [ ] Action Item 1
+* [ ] Action Item 2
+* [ ] Action Item 3
+* [ ] Action Item 4
+* [ ] Action Item 5
 ---
 ### Date: sep 24 2024 
 - Topics of discussion
@@ -75,11 +73,11 @@ https://www.markdownguide.org/cheat-sheet/
 
 
 - Action Items:
--[ ]  Action Item 1
--[ ]  Action Item 2
--[ ]  Action Item 3
--[ ]  Action Item 4
--[ ]  Action Item 5
+* [ ] Action Item 1
+* [ ] Action Item 2
+* [ ] Action Item 3
+* [ ] Action Item 4
+* [ ] Action Item 5
 ---
 ### Date: sep 24 2024 
 - Topics of discussion
@@ -88,8 +86,8 @@ https://www.markdownguide.org/cheat-sheet/
 
 
 - Action Items:
--[ ]  Action Item 1
--[ ]  Action Item 2
--[ ]  Action Item 3
--[ ]  Action Item 4
--[ ]  Action Item 5
+* [ ] Action Item 1
+* [ ] Action Item 2
+* [ ] Action Item 3
+* [ ] Action Item 4
+* [ ] Action Item 5
