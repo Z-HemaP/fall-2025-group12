@@ -10,7 +10,7 @@ https://www.markdownguide.org/cheat-sheet/
 
 - Action Items:
 
--[ ] Action Item 1
+*[ ] Action Item 1
 
 
 -[ ] Action Item 2
