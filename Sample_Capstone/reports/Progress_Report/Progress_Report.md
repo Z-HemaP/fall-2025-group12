@@ -35,9 +35,9 @@ https://www.markdownguide.org/cheat-sheet/
 ### Date: sep 24 2024 
 - Topics of discussion
 
-| Checkbox Experiments | [ ] unchecked header | [x] checked header |
-| ---------------------|:--------------------:|:------------------:|
-| checkbox             |      * [ ] row       |     * [x] row      |
+| Checkbox Experiments | checked header | crossed header |
+| ---------------------|:--------------:|:--------------:|
+| checkbox             |  &check; Row   |  &cross; row   |
 
 
 - Action Items:
@@ -53,11 +53,11 @@ https://www.markdownguide.org/cheat-sheet/
 
 | Selection |        |
 | --------- | ------ |
-| <li>- [ ] </li> |  |
+| &#x2610;  |
 
 | Selection |        |
 | --------- | ------ |
-| <li>- [x] </li> |  |
+| &#x2611; |
 
 - Action Items:
 * [ ] Action Item 1
