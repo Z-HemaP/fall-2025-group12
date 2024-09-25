@@ -2,7 +2,8 @@ Note: Use Markdown Cheat Sheet download in the directory as needed.
 
 - Useful links
   - https://github.com/im-luka/markdown-cheatsheet
-  - 
+
+---
 ## Date: Week 1 - Month Day Year 
 - Topics of discussion
     - Item1
@@ -211,14 +212,21 @@ Note: Use Markdown Cheat Sheet download in the directory as needed.
 
 
 
-- **_Add Tables As needed._**
+- **_Add Pyhton Code_**
+
+```
+import numpy as np
+a = np.array()
+```
+
+- **_Add Tables as needed._**
 
 | Checkbox Experiments | checked header | crossed header |
 | ---------------------|:--------------:|:--------------:|
 | checkbox             |  &check; Row   |  &cross; row   |
 
 
-- **_Add Tables As needed._**
+- **_Add Tables as needed._**
 
 
 |checked|unchecked|crossed|
@@ -227,7 +235,7 @@ Note: Use Markdown Cheat Sheet download in the directory as needed.
 |&#x2611;|&#x2610;|&#x2612;|
 
 
-- **_Add Tables As needed._**
+- **_Add Tables as needed._**
 
 | Selection |        |
 | --------- | ------ |
@@ -236,3 +244,6 @@ Note: Use Markdown Cheat Sheet download in the directory as needed.
 | Selection |        |
 | --------- | ------ |
 | &#x2611; |
+
+- **_Create Links as needed_**
+  - [link text](full url minus the en-us locale)
