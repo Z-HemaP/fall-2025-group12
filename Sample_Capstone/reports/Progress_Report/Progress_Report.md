@@ -248,6 +248,7 @@ a = np.array()
 - **_Create Links as needed_**
   - [link text](full url minus the en-us locale)
 
+- **_Add Geo Json_**
 
 ```geojson
 {
@@ -274,4 +275,15 @@ a = np.array()
     }
   ]
 }
+```
+
+- **_Add flow chart_**
+
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
