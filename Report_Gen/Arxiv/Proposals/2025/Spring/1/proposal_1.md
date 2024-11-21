@@ -26,6 +26,9 @@
 ![Figure 1: Example figure](2025_Spring_1.png)
 *Figure 1: Caption*
 
+![Figure 2: Example figure](2025_Spring_1_1.png)
+*Figure 2: Caption*
+
 ## 2 Dataset:  
 
             Students will utilize a bands from Sentinel-2 satellite imagery to classify land cover. 
