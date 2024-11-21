@@ -44,9 +44,6 @@ f"""
 ![Figure 1: Example figure]({data['Year']}_{data['Semester']}_{data['Version']}.png)
 *Figure 1: Caption*
 
-![Figure 2: Example figure]({data['Year']}_{data['Semester']}_{f"{data['Version']}_1"}.png)
-*Figure 2: Caption*
-
 ## 2 Dataset:  
 {data['Dataset']}
 
