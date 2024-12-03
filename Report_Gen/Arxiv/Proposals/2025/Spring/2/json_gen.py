@@ -77,7 +77,7 @@ data_to_save = \
         # -----------------------------------------------------------------------------------------------------------------------
         "Expected Number Students":
             """
-            For this project maximum 8 students can work on it.  
+            For this project maximum 3 students can work on it.  
             """,
         # -----------------------------------------------------------------------------------------------------------------------
         "Possible Issues":

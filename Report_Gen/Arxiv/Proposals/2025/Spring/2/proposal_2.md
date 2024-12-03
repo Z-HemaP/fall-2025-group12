@@ -66,7 +66,7 @@
 
 ## 6 Expected Number Students:  
 
-            For this project maximum 8 students can work on it.  
+            For this project maximum 3 students can work on it.  
             
 
 ## 7 Possible Issues:  
