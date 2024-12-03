@@ -1,30 +1,15 @@
-import json
-import os
-import shutil
+
+# Capstone Proposal
+## Advanced Data Acquisition and Web Mining
+### Proposed by: Dr. Amir Jafari
+#### Email: ajafari@gwu.edu
+#### Advisor: Amir Jafari
+#### The George Washington University, Washington DC  
+#### Data Science Program
 
 
-def save_to_json(data, output_file_path):
-    with open(output_file_path, 'w') as output_file:
-        json.dump(data, output_file, indent=2)
-
-
-data_to_save = \
-    {
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Version":
-            """3""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Year":
-            """2025""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Semester":
-            """Spring""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "project_name":
-            """Advanced Data Acquisition and Web Mining""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Objective":
-            """ 
+## 1 Objective:  
+ 
             The goal of this project is to develop a comprehensive, intelligent web scraping and data structuring system
              tailored for research applications. This system will:
 
@@ -84,10 +69,13 @@ data_to_save = \
             The end product will be a powerful, flexible system capable of autonomously collecting, cleaning, and 
             structuring large volumes of web data from diverse sources, tailored to support various research endeavors 
             across academic and industry settings.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Dataset":
-            """
+            
+
+![Figure 1: Example figure](2025_Spring_3.png)
+*Figure 1: Caption*
+
+## 2 Dataset:  
+
             The project will target a diverse range of online sources relevant to research, including but not limited to:
 
             1. Academic journal websites and digital libraries (e.g., JSTOR, ScienceDirect)
@@ -104,10 +92,10 @@ data_to_save = \
             Students will need to identify and prioritize data sources based on their relevance, accessibility, and data
              quality. They should also consider the specific requirements of different research domains when selecting 
              and structuring the data.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Rationale":
-            """
+            
+
+## 3 Rationale:  
+
             In the era of information abundance, efficient data acquisition and structuring are crucial for advancing 
             research across various fields. This project addresses several key needs:
 
@@ -124,10 +112,10 @@ data_to_save = \
             By developing this advanced research data acquisition system, students will contribute to the efficiency and 
             effectiveness of the research process across multiple disciplines, potentially accelerating scientific 
             discovery and innovation.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Approach":
-            """
+            
+
+## 4 Approach:  
+
             The project will be approached through several key steps:
 
             1. Research and Planning:
@@ -178,10 +166,10 @@ data_to_save = \
             10. Documentation and Deployment:
                 - Create comprehensive documentation for the system
                 - Prepare a deployment strategy, including considerations for cloud-based implementations
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Timeline":
-            """
+            
+
+## 5 Timeline:  
+
             This is a rough timeline for the project:
 
             - (2 Weeks) Research and Planning
@@ -195,15 +183,16 @@ data_to_save = \
             - (3 Weeks) Testing and Optimization
             - (2 Weeks) Documentation and Deployment
             - (2 Weeks) Final Presentation and Project Wrap-up
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Expected Number Students":
-            """
+            
+
+
+## 6 Expected Number Students:  
+
             This project is suitable for a team of 1-2 students. The complexity and scope of the project allow for effective distribution of tasks among team members, promoting collaborative learning and development across various aspects of web scraping, data processing, and machine learning.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Possible Issues":
-            """
+            
+
+## 7 Possible Issues:  
+
             Several challenges may arise during the project:
 
             1. Ethical and Legal Considerations: Ensuring compliance with websites' terms of service, respecting robots.txt files, and adhering to data usage rights.
@@ -220,19 +209,10 @@ data_to_save = \
             12. Automated Decision Making: Ensuring the accuracy and reliability of the intelligent source discovery and data categorization features.
 
             Students will need to research and implement solutions to these challenges, which will be an integral part of the learning experience and contribute significantly to the project's innovation in the field of research data acquisition and management.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Proposed by": "Dr. Amir Jafari",
-        "Proposed by email": "ajafari@gwu.edu",
-        "instructor": "Amir Jafari",
-        "instructor_email": "ajafari@gmail.com",
-        "github_repo": "https://github.com/amir-jafari/Capstone",
-        # -----------------------------------------------------------------------------------------------------------------------
-    }
-os.makedirs(
-    os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',
-    exist_ok=True)
-output_file_path = os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}{os.sep}'
-save_to_json(data_to_save, output_file_path + "input.json")
-shutil.copy('json_gen.py', output_file_path)
-print(f"Data saved to {output_file_path}")
+            
+
+
+## Contact
+- Author: Amir Jafari
+- Email: [ajafari@gmail.com](Eamil)
+- GitHub: [https://github.com/amir-jafari/Capstone](Git Hub rep)
