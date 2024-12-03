@@ -1,30 +1,15 @@
-import json
-import os
-import shutil
+
+# Capstone Proposal
+## Multi-Agent LLM System with LangGraph (RAG and LangChain)
+### Proposed by: Dr. Amir Jafari
+#### Email: ajafari@gwu.edu
+#### Advisor: Amir Jafari
+#### The George Washington University, Washington DC  
+#### Data Science Program
 
 
-def save_to_json(data, output_file_path):
-    with open(output_file_path, 'w') as output_file:
-        json.dump(data, output_file, indent=2)
-
-
-data_to_save = \
-    {
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Version":
-            """4""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Year":
-            """2025""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Semester":
-            """Spring""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "project_name":
-            """Multi-Agent LLM System with LangGraph (RAG and LangChain)""",
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Objective":
-            """ 
+## 1 Objective:  
+ 
             The goal of this project is to develop an advanced multi-agent system using Large Language Models (LLMs) that 
             leverages a language graph architecture and Retrieval-Augmented Generation (RAG) with language caching to solve complex NLP tasks. The system will:
         
@@ -78,10 +63,13 @@ data_to_save = \
             The end product will be a cutting-edge, flexible system capable of tackling complex NLP tasks through the
              coordinated efforts of multiple specialized agents, enhanced by a language graph architecture and efficient
               information retrieval through RAG and language caching.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Dataset":
-            """
+            
+
+![Figure 1: Example figure](2025_Spring_4.png)
+*Figure 1: Caption*
+
+## 2 Dataset:  
+
             The project will utilize a diverse range of datasets to train and evaluate the multi-agent system:
         
             1. General Language Understanding:
@@ -128,10 +116,10 @@ data_to_save = \
             Students will need to ensure proper data handling, respecting licensing and usage rights for all datasets. 
             They should also consider creating synthetic datasets or augmenting existing ones to test specific aspects
              of the multi-agent system and language graph interactions.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Rationale":
-            """
+            
+
+## 3 Rationale:  
+
             The development of a multi-agent LLM system with language graph and RAG capabilities addresses several critical 
             needs in the field of artificial intelligence and natural language processing:
         
@@ -145,10 +133,10 @@ data_to_save = \
             8. Real-world Application: Develop a system capable of addressing practical, multi-faceted NLP challenges in areas such as research, business intelligence, and customer service.
         
             By developing this advanced multi-agent system, students will contribute to the cutting-edge of AI and NLP research, potentially opening new avenues for more intelligent and capable language processing systems.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Approach":
-            """
+            
+
+## 4 Approach:  
+
             The project will be approached through several key steps:
         
             1. Research and Planning:
@@ -200,10 +188,10 @@ data_to_save = \
                 - Create detailed documentation for the system architecture and components
                 - Develop user guides and API documentation
                 - Prepare a deployment strategy, including cloud-based implementations
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Timeline":
-            """
+            
+
+## 5 Timeline:  
+
             This is a rough timeline for the project:
         
             - (2 Weeks) Research and Planning
@@ -217,15 +205,16 @@ data_to_save = \
             - (3 Weeks) Evaluation and Testing
             - (2 Weeks) Documentation and Deployment
             - (2 Weeks) Final Presentation and Project Wrap-up
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Expected Number Students":
-            """
+            
+
+
+## 6 Expected Number Students:  
+
             Given the complexity and scope of this project, it is suitable for a team of 2-3 students. The multi-faceted nature of the system allows for effective task distribution, promoting collaborative learning and development across various aspects of AI, NLP, and distributed systems.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Possible Issues":
-            """
+            
+
+## 7 Possible Issues:  
+
             Several challenges may arise during the project:
         
             1. Complexity of Integration: Ensuring seamless interaction between multiple agents, the language graph, and the RAG system.
@@ -242,19 +231,10 @@ data_to_save = \
             12. Resource Intensive: Managing the computational and memory requirements of multiple LLMs, a language graph, and a RAG system.
         
             Students will need to research and implement solutions to these challenges, which will be an integral part of the learning experience and contribute significantly to the project's innovation in the field of advanced NLP systems.
-            """,
-        # -----------------------------------------------------------------------------------------------------------------------
-        "Proposed by": "Dr. Amir Jafari",
-        "Proposed by email": "ajafari@gwu.edu",
-        "instructor": "Amir Jafari",
-        "instructor_email": "ajafari@gmail.com",
-        "github_repo": "https://github.com/amir-jafari/Capstone",
-        # -----------------------------------------------------------------------------------------------------------------------
-    }
-os.makedirs(
-    os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}',
-    exist_ok=True)
-output_file_path = os.getcwd() + os.sep + f'Arxiv{os.sep}Proposals{os.sep}{data_to_save["Year"]}{os.sep}{data_to_save["Semester"]}{os.sep}{data_to_save["Version"]}{os.sep}'
-save_to_json(data_to_save, output_file_path + "input.json")
-shutil.copy('json_gen.py', output_file_path)
-print(f"Data saved to {output_file_path}")
+            
+
+
+## Contact
+- Author: Amir Jafari
+- Email: [ajafari@gmail.com](Eamil)
+- GitHub: [https://github.com/amir-jafari/Capstone](Git Hub rep)
