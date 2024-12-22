@@ -3,7 +3,7 @@
 
 ----
 
-## S - S10 - 2024
+## Spring  2024
 
 
 1. [Capstone Group 0 : Predicting blood transfusions for coronary artery]()
@@ -45,7 +45,17 @@
 
 ----
 
-## F - S10 - 2024
+## Fall 2024
 
 
-1.
+1. [Capstone Group 1 : Advancing Temporal Forecasting: A Comparative Analysis of Conventional Paradigms and Deep Learning Architectures on Publicly Accessible Datasets](https://github.com/hslgao4/Capstone-Group-1)
+
+    - [Publication Link - UnderReview]()
+
+2. [Capstone Group 2 : Optimizing Information Retrieval: A Hybrid Model Leveraging MAR and RAPTOR Frameworks](https://github.com/Akamemz/MAR-RAPTOR-hybrid-model)
+
+    - [Publication Link - UnderReview]()
+
+3. [Capstone Group 5 : FolkRAG: A Retrieval-Augmented Generation System for Cultural Heritage Materials](https://github.com/GWU-MS-DS/Capstone)
+
+    - [Publication Link - UnderReview]()
