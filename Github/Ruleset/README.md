@@ -21,7 +21,7 @@
 - Add bypass on the right side
 - Check box the Repository Admin Role
 - It makes a bypass list to Always allow
-- Then click on 3 horizontal lines and check box for pull request only.
+- Then click on 3 horizontal lines and checkbox for pull request only.
 
 **Target Branches:**  
 
