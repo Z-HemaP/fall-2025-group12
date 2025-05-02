@@ -14,7 +14,6 @@
 ![1.png](figs/1.png)
 **Enforcement status** 
 
-
 - Active
 
 **Bypass List:**  
