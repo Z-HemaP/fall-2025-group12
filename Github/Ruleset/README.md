@@ -10,7 +10,6 @@
 
 **Ruleset Name** 
 
-
 - main 
 ![1.png](figs/1.png)
 **Enforcement status** 
