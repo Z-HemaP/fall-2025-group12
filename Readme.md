@@ -20,7 +20,7 @@
 - [Data and Outputs](#data-and-outputs)
 - [Customization](#customization)
 ## Directory Structure
-fall-2025-group12/
+```bash fall-2025-group12/
 │
 ├── demo/                # Demo scripts and notebooks
 ├── presentation/        # Presentation slides and materials
@@ -41,7 +41,7 @@ fall-2025-group12/
 │   ├── tests/           # Test cases
 │
 └── Readme.md            # Project documentation
-
+```
 
 ## Installation & Requirements
 
