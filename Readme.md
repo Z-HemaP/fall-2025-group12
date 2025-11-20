@@ -9,6 +9,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [Directory Structure](#directory-structure)
 - [Installation & Requirements](#installation--requirements)
 - [Usage](#usage)
 - [Modules](#modules)
@@ -18,7 +19,28 @@
     - [main.py](#mainpy)
 - [Data and Outputs](#data-and-outputs)
 - [Customization](#customization)
-
+## Directory Structure
+fall-2025-group12/
+│
+├── demo/                # Demo scripts and notebooks
+├── presentation/        # Presentation slides and materials
+├── reports/             # Project reports/documentation
+├── research_paper/      # Supporting research documentation
+├── Results/             # Output files (.csv, plots, etc)
+│   ├── all_data.csv
+│   ├── all_matrices.csv
+│   ├── all_rewards.csv
+│   ├── Data Average Plot.jpg
+├── src/
+│   ├── component/
+│   │   ├── env.py       # Synthetic environment generation
+│   │   ├── model.py     # Bandit models/algorithms
+│   │   ├── plot.py      # Plotting functions
+│   ├── main/
+│   │   ├── main.py      # Experiment runner
+│   ├── tests/           # Test cases
+│
+└── Readme.md            # Project documentation
 
 
 ## Installation & Requirements
