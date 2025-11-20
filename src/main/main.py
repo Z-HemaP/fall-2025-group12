@@ -1,12 +1,19 @@
 
 #%%
-from model import NonStationaryEpsilonGreedy , UCB, SlidingWindowUCB, CUSUMUCB, EXP3S
-from env import *
-from plot import *
+import os
+import sys
+project_root = "/Users/hema/Desktop/GWU/Aug_2025/Capstone/fall-2025-group12"
+os.chdir(project_root)
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+from src.component.model import NonStationaryEpsilonGreedy , UCB, SlidingWindowUCB, CUSUMUCB, EXP3S
+from src.component.env import *
+from src.component.plot import *
 import warnings
+import csv
 
 warnings.filterwarnings("ignore")
-num_experiments = 50
+num_experiments = 2
 np.random.seed(42)          
 seeds = np.random.rand(num_experiments) 
 environment = "drifting"
@@ -50,6 +57,27 @@ for i, s in enumerate(seeds):
     all_data.append(data)
     all_rewards.append(rewards)
     all_matrices.append(matrix)
+
+
+#%%
+results_dir = os.path.join(project_root, "Results")
+os.makedirs(results_dir, exist_ok=True)
+#%%
+# Use absolute path for file writing
+outfile_path = os.path.join(results_dir, "all_data.csv")
+with open(outfile_path, 'w', newline='') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows(all_data)
+
+outfile_path = os.path.join(results_dir, "all_rewards.csv")
+with open(outfile_path, 'w', newline='') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows(all_rewards)
+
+outfile_path = os.path.join(results_dir, "all_matrices.csv")
+with open(outfile_path, 'w', newline='') as myfile:
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerows(all_matrices)
 
 #%%
 combined_data = np.vstack(all_data)
@@ -95,7 +123,11 @@ fig, ax = plt.subplots(figsize=(12, 8))
 data_average_plot_with_ci(all_data_array, arm_means=arm_means, ax=ax)
 fig.suptitle("Data Average Plot with Confidence Intervals", fontsize=16)
 plt.tight_layout()
+outfile_path = os.path.join(results_dir, "Data Average Plot.jpg")
+
+plt.savefig(outfile_path, dpi=300, bbox_inches='tight')
 plt.show()
+
 
 #%%
 fig, ax = plt.subplots(figsize=(12, 8))
