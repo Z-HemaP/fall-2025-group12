@@ -1,62 +1,124 @@
-Multi-Armed Bandit Algorithms (Fall 2025 Group 12)
-This project implements and analyzes several algorithms for multi-armed bandit problems in nonstationary and adversarial environments. It includes code to generate synthetic environments, run different models, and visualize results such as average rewards and cumulative performance.
+# Multi-Armed Bandit Simulation Project
 
-Structure
+## Overview
+
+- Simulates multiple multi-armed bandit algorithms for research and experimentation.
+- Supports stationary, nonstationary/drifting, Gaussian, and Bernoulli environments.
+- Designed for comparing performance, reproducibility, and flexibility.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Directory Structure](#directory-structure)
+- [Installation & Requirements](#installation--requirements)
+- [Usage](#usage)
+- [Modules](#modules)
+    - [env.py](#envpy)
+    - [model.py](#modelpy)
+    - [plot.py](#plotpy)
+    - [main.py](#mainpy)
+- [Data and Outputs](#data-and-outputs)
+- [Customization](#customization)
+- [License](#license)
+- [Contact](#contact)
+
+## Directory Structure
+fall-2025-group12/
+├── demo/
+├── presentation/
+├── reports/
+├── research_paper/
+├── Results/
+│ ├── all_data.csv
+│ ├── all_matrices.csv
+│ ├── all_rewards.csv
+│ ├── Data Average Plot.jpg
+├── src/
+│ ├── component/
+│ │ ├── env.py
+│ │ ├── model.py
+│ │ ├── plot.py
+│ ├── main/
+│ │ ├── main.py
+│ ├── tests/
+└── Readme.md
 
 
-reports/, research_paper/ – Written reports and supporting research documents.
+## Installation & Requirements
 
-Results/ – Experimental results, including data CSV files and plots:
+- Requires Python 3.8+
+- Needed packages:
+    - `numpy`
+    - `pandas`
+    - `matplotlib`
+- Install all dependencies at once:
+    ```
+    pip install numpy pandas matplotlib
+    ```
 
-all_data.csv, all_rewards.csv, all_matrices.csv – Experiment outputs.
+## Usage
 
-Data Average Plot.jpg – Matplotlib plot visualizing model performance.
+- Run the main experiment script:
+    ```
+    python src/main/main.py
+    ```
+- Results are automatically saved in the `Results` folder.
 
-src/ – Main source code:
+## Modules
 
-component/
+### env.py
 
-env.py – Functions to generate synthetic environments (Gaussian, Bernoulli, drifting).​
+- Generates bandit environments for simulations.
+- Supports:
+    - Gaussian environments
+    - Bernoulli environments
+    - Nonstationary (drifting) setups
+- Configurable parameters:
+    - Number of arms, means/probabilities, std deviations, observations, categories, etc.
 
-model.py – Implementations of bandit algorithms:
+### model.py
 
-Non-Stationary Epsilon-Greedy
+- Contains multi-armed bandit algorithm implementations.
+- Algorithms included:
+    - NonStationaryEpsilonGreedy
+    - UCB (Upper Confidence Bound)
+    - SlidingWindowUCB
+    - CUSUMUCB
+    - EXP3S
+- Each model:
+    - Can be configured independently
+    - Offers training, arm selection, and logging
 
-UCB and Sliding Window UCB
+### plot.py
 
-CUSUM-UCB
+- Visualizes experiment data and results.
+- Provides:
+    - Violin plots for distributions
+    - Rolling average and cumulative reward charts
+    - Model comparison figures
 
-EXP3.S (switch-adaptive).​
+### main.py
 
-plot.py – Functions for plotting reward distributions, rolling averages, and cumulative plots.​
+- Central experiment runner and results aggregator.
+- Steps:
+    - Sets up random seeds and parameters
+    - Collects and saves run data
+    - Creates visual summaries of results
 
-main/
+## Data and Outputs
 
-main.py – Main experiment runner script. Configures and executes batches of bandit experiments, saves data to CSV, generates plots.​
+- Output files:
+    - `all_data.csv`, `all_rewards.csv`, `all_matrices.csv`: Tabular experiment results
+    - `Data Average Plot.jpg`: Visual summary of average model performance
 
-tests/ – Unit test and utility files.
+## Customization
 
-Usage
-Install required dependencies (e.g., numpy, pandas, matplotlib).
+- Adjust parameters in `main.py` and `env.py` to:
+    - Change number of arms, users, documents, and observations
+    - Experiment with different reward structures and algorithm settings
+    - Tune model hyperparameters as desired
 
-Run experiments via main.py in src/main/:
 
-Configure experiment options (number of arms, observations, environment type) within main.py.
 
-Outputs are saved in the Results directory as CSV and image files.
 
-Explore/visualize results with plot functions in plot.py.
 
-Algorithms
-NonStationaryEpsilonGreedy – Uses exponential recency-weighted reward updates.
-
-UCB & SlidingWindowUCB – Upper-Confidence Bound variants; SlidingWindow applies recent stats for nonstationarity.
-
-CUSUMUCB – Detects changes via CUSUM, resetting stats when a change occurs.
-
-EXP3S – Adversarial/stationary bandit model with switch-adaptive updates.
-
-Data & Experiments
-Synthetic environments are designed in env.py and support customizable arms, reward means (Gaussian/Bernoulli), and drift properties.
-
-Experiments compare average/cumulative performance across models and document how algorithms adapt to changing reward distributions.
