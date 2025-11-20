@@ -9,7 +9,6 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Directory Structure](#directory-structure)
 - [Installation & Requirements](#installation--requirements)
 - [Usage](#usage)
 - [Modules](#modules)
@@ -19,29 +18,7 @@
     - [main.py](#mainpy)
 - [Data and Outputs](#data-and-outputs)
 - [Customization](#customization)
-- [License](#license)
-- [Contact](#contact)
 
-## Directory Structure
-fall-2025-group12/
-├── demo/
-├── presentation/
-├── reports/
-├── research_paper/
-├── Results/
-│ ├── all_data.csv
-│ ├── all_matrices.csv
-│ ├── all_rewards.csv
-│ ├── Data Average Plot.jpg
-├── src/
-│ ├── component/
-│ │ ├── env.py
-│ │ ├── model.py
-│ │ ├── plot.py
-│ ├── main/
-│ │ ├── main.py
-│ ├── tests/
-└── Readme.md
 
 
 ## Installation & Requirements
@@ -53,7 +30,7 @@ fall-2025-group12/
     - `matplotlib`
 - Install all dependencies at once:
     ```
-    pip install numpy pandas matplotlib
+    pip install -r requirements.txt
     ```
 
 ## Usage
