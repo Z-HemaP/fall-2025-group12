@@ -57,36 +57,23 @@ def create_environment(**kwargs):
     arm_stds = kwargs.get("arm_stds", None)
     random_seed = kwargs.get("random_seed", None)
     observations = kwargs.get("observations", 2000)
-    alpha = kwargs.get("alpha", 0.2)
-    a = kwargs.get("a", 2)
-    b = kwargs.get("b", 5)
-    categories = kwargs.get("categories", ["sports", "politics"])
-    num_documents = kwargs.get("n_documents", 2)
-    num_users = kwargs.get("n_users", 1)
-    beta1 = kwargs.get("beta1", 0.3)
-    beta2 = kwargs.get("beta2", 0.3)
-    gamma1 = kwargs.get("gamma1", 0.3)
-    gamma2 = kwargs.get("gamma2", 0.3)
-
     
     # Input validation
-    if environment not in ["gaussian", "bernoulli","drifting"]:
-        raise ValueError("Environment must be either 'gaussian' or 'bernoulli or 'drifting'")
+    if environment not in ["gaussian", "bernoulli"]:
+        raise ValueError("Environment must be either 'gaussian' or 'bernoulli'")
     
-    if environment in ["gaussian", "bernoulli"]:
-        if len(arm_means) == 0:
-            raise ValueError("arm_means cannot be empty")
-
-        if not all(len(env_means) == n_arms for env_means in arm_means):
-            raise ValueError(f"Each environment in arm_means must have exactly {n_arms} arms")
-
+    if len(arm_means) == 0:
+        raise ValueError("arm_means cannot be empty")
+    
+    if not all(len(env_means) == n_arms for env_means in arm_means):
+        raise ValueError(f"Each environment in arm_means must have exactly {n_arms} arms")
     
     # Set random seed
     if random_seed is not None:
         np.random.seed(random_seed)
-    rng = np.random.default_rng(random_seed)
-    n_environments = len(arm_means) if environment != "drifting" else 1 
-    obs_per_env = observations // n_environments 
+    
+    n_environments = len(arm_means)
+    obs_per_env = observations // n_environments
     
     if environment == "gaussian":
         # Set default standard deviations if not provided
@@ -140,39 +127,3 @@ def create_environment(**kwargs):
         
         # Stack all environments vertically
         return np.vstack(bernoulli_data)
-    
-    elif environment == "drifting":
-        rng = np.random.default_rng(random_seed)
-        num_categories = len(categories) 
-
-        probs = np.ones(n_arms) / n_arms  
-        user = np.zeros((observations, n_arms))
-        user[0] = probs
-
-
-        
-
-        documents = []
-        for doc_id in range(num_documents):
-            rng = np.random.default_rng(random_seed + (doc_id+1) * num_categories)
-
-            topic = rng.dirichlet([(doc_id+1) * alpha] * num_categories)
-            popularity = rng.beta((doc_id+1) * a,(doc_id+1) * b)
-            quality = rng.beta((doc_id+1) * b,(doc_id+1) * a)
-            documents.append({
-                "doc_id": doc_id,
-                "x": topic,
-                "p": popularity,
-                "q": quality
-            })
-        
-        for t in range(1, observations):
-            probs += rng.normal(0, alpha, size=n_arms)
-            probs = np.clip(probs, 1e-6, None)
-            probs /= probs.sum()
-            user[t] = probs
-
-        
-    
-    return user
-
