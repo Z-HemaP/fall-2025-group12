@@ -105,6 +105,7 @@ class UCB:
         self.rewards_matrix = np.vstack([self.rewards_matrix, row.reshape(1, -1)])
         self.rewards_list.append(R)
         return R, r_vec
+    
 
     def action(self):
         self.T += 1
@@ -115,6 +116,7 @@ class UCB:
         bonus = np.sqrt((2.0 * np.log(self.T)) / self.N.flatten())
         ucb = self.Q.flatten() + bonus
         return int(np.argmax(ucb))
+
 
     def update(self, A, R):
         self.N[A] += 1
@@ -233,10 +235,10 @@ class SlidingWindowUCB:
         self.__init__(self.n_arms, self.window)
 
 # --------------------------
-# CUSUM-UCB
+# CUMSUM-UCB
 # --------------------------
 
-class CUSUMUCB:
+class CUMSUMUCB:    
     """
     CUSUM-UCB from Liu & Lee (2018): resets statistics for each arm when a change is detected via CUSUM.
     """
