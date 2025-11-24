@@ -6,23 +6,22 @@ project_root = "/Users/hema/Desktop/GWU/Aug_2025/Capstone/fall-2025-group12"
 os.chdir(project_root)
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
-from src.component.model import NonStationaryEpsilonGreedy , UCB, SlidingWindowUCB, CUSUMUCB, EXP3S
+from src.component.model import NonStationaryEpsilonGreedy , UCB, SlidingWindowUCB, CUMSUMUCB, EXP3S
 from src.component.env import *
 from src.component.plot import *
 import warnings
 import csv
 
 warnings.filterwarnings("ignore")
-num_experiments = 2
+num_experiments = 10
 np.random.seed(42)          
-seeds = np.random.rand(num_experiments) 
+seeds = np.random.randint(0,100,size = num_experiments) 
 environment = "drifting"
-model = "UCB"
 n_docs = 2  # number of documents (arms)
 
 # random_seed = 100
 epsilon = 0.05
-observations = 1000
+observations = 10000
 
 
 
@@ -33,8 +32,7 @@ all_data = []
 all_rewards = []
 all_matrices = []
 
-for i, s in enumerate(seeds):
-    curr_seed = int(s*1000)
+for i, curr_seed in enumerate(seeds):
     data = create_environment(
         env=environment,
         random_seed=curr_seed,
@@ -46,11 +44,11 @@ for i, s in enumerate(seeds):
         n_users=1,
         observations=observations
     )
-    model = NonStationaryEpsilonGreedy(n_arms=n_docs, epsilon=epsilon, alpha=0.001, random_seed=curr_seed)
+    # model = NonStationaryEpsilonGreedy(n_arms=n_docs, epsilon=epsilon, alpha=0.001, random_seed=curr_seed)
     # model = UCB(n_arms=n_docs, random_seed=curr_seed)
     # model = SlidingWindowUCB(n_arms=n_docs, window=50, random_seed=curr_seed)
     # model = CUSUMUCB(n_arms=n_docs, h=10,epsilon=0.2, M=5, random_seed=curr_seed)
-    # model = EXP3S(n_arms=n_docs, gamma=0.07, alpha=0.1, random_seed=curr_seed)
+    model = EXP3S(n_arms=n_docs, gamma=0.07, alpha=0.1, random_seed=curr_seed)
 
     table, rewards, matrix = model.train(data)
     
@@ -85,17 +83,16 @@ combined_data = np.vstack(all_data)
 violinplot_environment(combined_data, arm_means=None)
 
 #%%
-num_axes = n_docs + 1 
-fig, ax = plt.subplots(int(np.ceil(num_axes/2)),int(np.ceil(num_axes/2)),figsize=(12, 8))
+
 for i in range(num_experiments):
-    model_average_plot(all_data[i], all_rewards[i], all_matrices[i], arm_means, top=None, ax=ax, alpha=0.2)
+    model_average_plot(all_data[i], all_rewards[i], all_matrices[i], arm_means, top=None, alpha=0.2)
 
 # ax.set_xlabel("Time Steps")
 # ax.set_ylabel("Average Reward / Selection Rate")
 # ax.set_title("Model Performance Over 50 Seeds")
 # ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
-fig.suptitle("Model Average Plot", fontsize=16)
-fig.tight_layout()
+
+plt.tight_layout()
 plt.show()    
 
 
