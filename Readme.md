@@ -26,7 +26,7 @@ Supports stationary and nonstationary/drifting setups with Gaussian and Bernoull
 
 ```bash fall-2025-group12/
 │
-├── demo/ # Demo GIF, video, and overview README
+├── demo/ # Demo (Contains an Introduction Video to the project)
 ├── presentation/ # Capstone presentation slides and materials
 ├── reports/ # LaTeX report sources and compiled PDFs
 ├── research_paper/ # Supporting research documentation
